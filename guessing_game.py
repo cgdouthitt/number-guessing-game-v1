@@ -26,9 +26,9 @@ def start_game():
   user_guesses = 0
   while True:
     input_number = input("Guess a number (1 - 10): ")
+    user_guesses += 1
     try:
       guessed_int = int(input_number)
-      user_guesses += 1
       if guessed_int < 1 or guessed_int > 10:
         print("This number is outside the guess range.")
       elif guessed_int > random_number:
