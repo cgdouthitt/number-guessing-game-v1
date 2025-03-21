@@ -6,24 +6,25 @@ Project 1 - The Number Guessing Game
 
 # Import the random module.
 import random
-# High score
-high_score = 0
 # Create the start_game function.
 def start_game():
 # Write your code inside this function.
 
 #   When the program starts, we want to:
 #   ------------------------------------
-#   1. Display an intro/welcome message to the player.
+#   1. Display an intro/welcome message to the player as well as message before high score is set.
   print("<=======  !!!Welcome to the number guessing game!!!  =======>")
   print("The high score is not set yet. Go for it!!")
-#   2. Store a random number as the answer/solution.
+#   2. Initial variable setting. 
+#     a. Store a random number as the answer/solution.
+#     b. Store initial high score as highest possible score.
+#     c. Store initial user guesses.
   random_number = random.randint(1, 10)
+  high_score = 10
+  user_guesses = 0
 #   3. Continuously prompt the player for a guess.
 #     a. If the guess is greater than the solution, display to the player "It's lower".
 #     b. If the guess is less than the solution, display to the player "It's higher".
-  high_score = 10
-  user_guesses = 0
   while True:
     input_number = input("Guess a number (1 - 10): ")
     user_guesses += 1
