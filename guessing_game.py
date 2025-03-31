@@ -37,7 +37,7 @@ def start_game():
       elif guessed_int < random_number:
         print("It's higher")
       else:
-        print(f"You got it!! \nIt took you {user_guesses} attempts to guess the number. \n<=======  !!Thanks for playing!!  =======>")
+        print(f"\nYou got it!! \nIt took you {user_guesses} attempts to guess the number. \n\n<=======  !!Thanks for playing!!  =======>\n")
         play_again = input("Would you like to play again? (y/n): ")
         if play_again.lower() == "y":
           if high_score > user_guesses:
@@ -47,6 +47,7 @@ def start_game():
           random_number = random.randint(1, 10)
           continue
         else:
+          print(f"\n<=======  !!!Thank you for playing. Your high score was {high_score}!!!  =======>")
           break
     except ValueError:
       print("Please enter a number.")
